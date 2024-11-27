@@ -2,20 +2,21 @@ package com.example.connectdb;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.connectdb.dto.Shop;
+import com.example.connectdb.dto.ShopDto;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Tuple;
 import jakarta.transaction.Transactional;
 
-import java.util.List;
 
 @RestController
 public class TestController {
@@ -45,7 +46,7 @@ public class TestController {
     }
 
     @GetMapping("/getById")
-    public Shop getById(
+    public ShopDto getById(
             @RequestParam("id") String id) {
 
         List<Tuple> listShopById = entityManager
@@ -59,7 +60,7 @@ public class TestController {
 
         } else {
             Tuple tuple = listShopById.get(0);
-            Shop shop = new Shop();
+            ShopDto shop = new ShopDto();
 
             shop.setShopId(tuple.get("shop_id", String.class));
             shop.setShopName(tuple.get("shop_name", String.class));
@@ -73,7 +74,7 @@ public class TestController {
     @Transactional
     @PostMapping("/insert")
     public boolean insert(
-        @RequestBody Shop shop
+        @RequestBody ShopDto shop
     ){
 
         int rowEffect  = entityManager.createNativeQuery(" INSERT INTO shop ( 'shop_id' , 'shop_name' ) VALUES ( :shop_id , :shop_name )")
@@ -85,9 +86,9 @@ public class TestController {
     }
 
     @Transactional
-    @PostMapping("/update")
+    @PutMapping("/update")
     public boolean update(
-        @RequestBody Shop shop
+        @RequestBody ShopDto shop
     ){
 
         int rowEffect  = entityManager.createNativeQuery("UPDATE shop SET shop_name = :shop_name WHERE shop_id = :shop_id ")
@@ -99,7 +100,7 @@ public class TestController {
     }
 
     @Transactional
-    @GetMapping("/delete")
+    @DeleteMapping("/delete")
     public boolean delete(
         @RequestParam ("id") String id
     ){

@@ -5,7 +5,7 @@ import lombok.experimental.Accessors;
 
 @Accessors(chain = true)
 @Data
-public class Shop {
+public class ShopDto {
 
     private String shopId;
     private String shopName;
