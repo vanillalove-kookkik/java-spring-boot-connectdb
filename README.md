@@ -1,36 +1,36 @@
-- SQLite
-- Create Table
-- SQL Command
-- SELECT
-- INSERT
-- UPDATE
-- DELETE
-- สร้าง Project
-- ทดสอบเชื่อมต่อกับ Database
-- Connect Database : SELECT
-- Connect Database : INSERT
-- Connect Database : UPDATE
-- Connect Database : DELETE
-- ORM & JPA
-- Entity
-- Mapping SQL type to Java type
-- Repository
-- Jpa : Select By Id
-- Jpa : Insert
-- Jpa : Update
-- Jpa : Delete
-- Jpa : Select By Query Method
-- Jpa : Select By Jpql
-- Map Entity : Many To One
-- Repository : Many To One Find & Save
-- Repository : Query Method
-- Repository : JPQL
-- Repository : JPQL Projection
-- Map Entity : One To One
-- Repository : One To One Find & Save
-- Map Entity : Composite PK
-- Repository : Composite PK Find & Save
-- Map Entity : Composite PK & FK
-- Repository : Composite PK & FK Find & Save
-- Map Entity : One To Many
-- Repository : One To Many Find & Save
++ SQLite
++ Create Table
++ SQL Command
++ SELECT
++ INSERT
++ UPDATE
++ DELETE
++ สร้าง Project
++ ทดสอบเชื่อมต่อกับ Database
++ Connect Database : SELECT
++ Connect Database : INSERT
++ Connect Database : UPDATE
++ Connect Database : DELETE
++ ORM & JPA
++ Entity
++ Mapping SQL type to Java type
++ Repository
++ Jpa : Select By Id
++ Jpa : Insert
++ Jpa : Update
++ Jpa : Delete
++ Jpa : Select By Query Method
++ Jpa : Select By Jpql
++ Map Entity : Many To One
++ Repository : Many To One Find & Save
++ Repository : Query Method
++ Repository : JPQL
++ Repository : JPQL Projection
++ Map Entity : One To One
++ Repository : One To One Find & Save
++ Map Entity : Composite PK
++ Repository : Composite PK Find & Save
++ Map Entity : Composite PK & FK
++ Repository : Composite PK & FK Find & Save
++ Map Entity : One To Many
++ Repository : One To Many Find & Save
