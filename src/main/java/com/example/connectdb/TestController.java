@@ -2,6 +2,7 @@ package com.example.connectdb;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,11 @@ public class TestController {
     @PersistenceContext
     private EntityManager entityManager;
     private Tuple tuple;
+
+    @GetMapping("/test")
+    public ResponseEntity test() {
+        return ResponseEntity.ok().build(); 
+    }
 
     @GetMapping("/test-db")
     public void testDb() {

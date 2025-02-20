@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 
 @Accessors(chain = true)
 @Data
-@Table(name = "order")
+@Table(name = "orders")
 @Entity
-public class Order {
+public class Orders {
     @Id
     @Column(name = "order_id")
     private String orderId;

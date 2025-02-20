@@ -42,7 +42,7 @@ public class OrderGoodsWithFkController {
         OrderGoodsWithFk orderGoodsWithFk = new OrderGoodsWithFk()
                 .setId(new OrderGoodsPk())
                 .setGoods(new Goods().setGoodsId(insertOrderGoodsDto.getGoodsId()))
-                .setOrder(new Order().setOrderId(insertOrderGoodsDto.getOrderId()))
+                .setOrders(new Orders().setOrderId(insertOrderGoodsDto.getOrderId()))
                 .setSum(insertOrderGoodsDto.getSum())
                 .setNumberOfPiece(insertOrderGoodsDto.getNumberOfPiece())
                 .setPricePerPiece(insertOrderGoodsDto.getPricePerPiece());

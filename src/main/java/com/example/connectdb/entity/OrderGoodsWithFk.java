@@ -18,7 +18,7 @@ public class OrderGoodsWithFk {
     @MapsId("orderId")
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    private Orders orders;
 
     @MapsId("goodsId")
     @ManyToOne
